@@ -1077,7 +1077,7 @@ _.setTranslation({
     "not enough scales": "鳞片不够了",
     "someone has locked and barricaded the door to this operating theatre.": "有人反锁了手术室的门.",
     "leave cave": "离开洞穴",
-    "hp: {0}/{1}": "HP: {0}/{1}",
+    "hp: {0}/{1}": "生命值: {0}/{1}",
     "a lone frog sits in the muck, silently.": "一个孤单的青蛙静静的蹲坐在淤泥上.",
     "the steel is strong, and the blade true.": "钢剑很锋利, 很可怕",
     "a shame to let what he'd found go to waste.": "不好意思, 我笑纳了.",
@@ -1680,7 +1680,7 @@ _.setTranslation({
     "a squatter stands firmly in the doorway of a small hut.": "有个人坚守在小木屋的门口.",
     "lights flash through the alleys between buildings.": "巷子里闪烁着灯光.",
     "say goodbye": "再会",
-    "{0} per {1}s": "{0} /{1}s",
+    "{0} per {1}s": "{0} /{1}秒",
     "a weathered family takes up in one of the huts.": "一户饱经风霜的人家住进一栋小屋",
     "run": "逃跑",
     "Exosphere": "外大气层",
@@ -5731,22 +5731,22 @@ var World = {
 		World.TILE_PROBS[World.TILE.BARRENS] = 0.5;
 		
 		// Setpiece definitions
-		World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: 'outpost', label: _('An&nbsp;Outpost') };
-		World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: 'ironmine', label:  _('Iron&nbsp;Mine') };
-		World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'coalmine', label:  _('Coal&nbsp;Mine') };
-		World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'sulphurmine', label:  _('Sulphur&nbsp;Mine') };
-		World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: 'house', label:  _('An&nbsp;Old&nbsp;House') };
-		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label:  _('A&nbsp;Damp&nbsp;Cave') };
-		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label:  _('An&nbsp;Abandoned&nbsp;Town') };
-		World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: 'city', label:  _('A&nbsp;Ruined&nbsp;City') };
-		World.LANDMARKS[World.TILE.SHIP] = { num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label:  _('A&nbsp;Crashed&nbsp;Starship')};
-		World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label:  _('A&nbsp;Borehole')};
-		World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label:  _('A&nbsp;Battlefield')};
-		World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label:  _('A&nbsp;Murky&nbsp;Swamp')};
+		World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: 'outpost', label: _('An Outpost') };
+		World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: 'ironmine', label:  _('Iron Mine') };
+		World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'coalmine', label:  _('Coal Mine') };
+		World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'sulphurmine', label:  _('Sulphur Mine') };
+		World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: 'house', label:  _('An Old House') };
+		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label:  _('A Damp Cave') };
+		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label:  _('An Abandoned Town') };
+		World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: 'city', label:  _('A Ruined City') };
+		World.LANDMARKS[World.TILE.SHIP] = { num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label:  _('A Crashed Starship')};
+		World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label:  _('A Borehole')};
+		World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label:  _('A Battlefield')};
+		World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label:  _('A Murky Swamp')};
 		
 		// Only add the cache if there is prestige data
 		if($SM.get('previous.stores')) {
-    			World.LANDMARKS[World.TILE.CACHE] = { num: 1, minRadius: 10, maxRadius: World.RADIUS * 1.5, scene: 'cache', label:  _('A&nbsp;Destroyed&nbsp;Village')};
+    			World.LANDMARKS[World.TILE.CACHE] = { num: 1, minRadius: 10, maxRadius: World.RADIUS * 1.5, scene: 'cache', label:  _('A Destroyed Village')};
 		}
 		
 		if(typeof $SM.get('features.location.world') == 'undefined') {
@@ -6394,7 +6394,7 @@ var World = {
 					var c = World.state.map[i][j];
 					switch(c) {
 						case World.TILE.VILLAGE:
-							mapString += '<span class="landmark">' + c + '<div class="tooltip' + ttClass + '">'+_('The&nbsp;Village')+'</div></span>';
+							mapString += '<span class="landmark">' + c + '<div class="tooltip' + ttClass + '">'+_('The Village')+'</div></span>';
 							break;
 						default:
 							if(typeof World.LANDMARKS[c] != 'undefined' && (c != World.TILE.OUTPOST || !World.outpostUsed(i, j))) {
@@ -13506,7 +13506,7 @@ div#engineRow {
 (function(){
 	//only used for poedit to find translatable strings
 	var keywords = [ _('saved.'), _('wood'),_('builder'),_('teeth'),_('meat'),_('fur'), _('alien alloy'), _('bullets'),
-	                 _('charm'),_('leather'),_('iron'), _('steel'), _('coal'), _('enegy cell'),
+	                 _('charm'),_('leather'),_('iron'), _('steel'), _('coal'), _('energy cell'),
 	                 _('torch'),_('medicine'),_('hunter'),_('trapper'),_('tanner'), _('grenade'), _('bolas'), 
 	                 _("charcutier"),_('iron miner'),_('coal miner'), _('sulphur miner'),  _('armourer'),
 	                 _('steelworker'),_('bait'),_('cured meat'), _('scales'), _('compass'), _('laser rifle'),
