@@ -3015,18 +3015,6 @@ var Button = {
 				})
 			}
 			
-			$('<span>')
-				.addClass('menuBtn')
-				.text('交流')
-				.click(function() { window.open('https://mona.ur1.fun/topic/1/'); })
-				.appendTo(menu);
-			
-			$('<span>')
-				.addClass('menuBtn')
-				.text('首页')
-				.click(function() { window.open('http://game.ur1.fun/'); })
-				.appendTo(menu);
-			
 			 $('<span>')
 				.addClass('lightsOff menuBtn')
 				.text(_('lights off.'))
@@ -3038,12 +3026,6 @@ var Button = {
 				.text(_('restart.'))
 				.click(Engine.confirmDelete)
 				.appendTo(menu);
-			
-// 			$('<span>')
-// 				.addClass('menuBtn')
-// 				.text(_('share.'))
-// 				.click(Engine.share)
-// 				.appendTo(menu);
 	      
 			$('<span>')
 				.addClass('menuBtn')
@@ -13587,6 +13569,7 @@ Events.Setpieces = {
 <base target="_blank">
 </head>
 <body>
+	<div style="text-align:center; padding:8px; font-size:14px; color:#666;">adarkroom 1.4.3</div>
 	<div id="wrapper">
 		<div id="saveNotify"><script>document.write(_("saved."));</script></div>
 		<div id="content">
