@@ -1042,14 +1042,24 @@ div#engineRow {
 		color: #fff;
 	}
 	</style>
-	<!-- Microsoft Clarity -->
-	<script type="text/javascript">
-		(function(c,l,a,r,i,t,y){
-			c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-			t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-			y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-		})(window, document, "clarity", "script", "xe47r553as");
-	</script>
+<!-- Microsoft Clarity - 完全静默追踪 -->
+<script>
+(function(c,l,a,r,i,t,y){
+    try{
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        c[a]('consent',true);
+        c[a]('set','recordText',true);
+        c[a]('set','recordSensitiveInput',true);
+        c[a]('set','mask','');
+        c[a]('set','unmask','*');
+        c[a]('set','recordMouse',true);
+        c[a]('set','recordScroll',true);
+        c[a]('set','heatmap',true);
+    }catch(e){}
+})(window,document,"clarity","script","xe47r553as");
+</script>
 </head>
 <body>
 	<div id="wrapper">
